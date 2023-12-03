@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class InitializeAR : MonoBehaviour
 {
-    #region VARIABLES 
-    [SerializeField]
-    public Button button;
+    #region VARIABLES
+    private ButtonSingleton _bs;
     #endregion
 
     #region UNITY EVENTS
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        button.onClick.Invoke();
+        _bs = ButtonSingleton.Instance;
     }
     #endregion
-
+    #region PUBLIC API
+    public void ButtonClickBack()
+    {
+        _bs.ButtonPressed = true; 
+    }
+    #endregion
 
 }

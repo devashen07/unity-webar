@@ -8,12 +8,9 @@ public class LoadNewScene : MonoBehaviour
     #region VARIABLES
     [SerializeField]
     private GameObject _loadingScreen;
+    [SerializeField]
+    private GameObject _enviro; 
     private ButtonSingleton _bs;
-
-    [SerializeField]
-    private GameObject _enviro;
-    [SerializeField]
-    private GameObject _help;
     #endregion
 
     #region PUBLIC API 
@@ -35,13 +32,9 @@ public class LoadNewScene : MonoBehaviour
             _loadingScreen.SetActive(true);
             yield return null;
         }
-        if (_scene != Enumerations.Scenes.HomeScreen)
-        {
-            _enviro.SetActive(false);
-            _help.SetActive(true);
-        }
 
         _loadingScreen.SetActive(false);
+        _enviro.SetActive(false);
 
     }
 
@@ -51,13 +44,15 @@ public class LoadNewScene : MonoBehaviour
 
         while (!unloadScene.isDone)
         {
+            _enviro.SetActive(true);
             _loadingScreen.SetActive(true);
             _bs.ButtonPressed = false;
             yield return null;
         }
 
-
+        
         _loadingScreen.SetActive(false);
+        _enviro.SetActive(false);
 
     }
     #endregion

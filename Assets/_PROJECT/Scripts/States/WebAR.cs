@@ -22,6 +22,7 @@ public class WebAR : BaseState
     {
         base.Enter();
         _bs = ButtonSingleton.Instance;
+        _bs.ButtonPressed = false; 
         _sm.AddScene(Enumerations.Scenes.WebAR);
 
     }
@@ -30,7 +31,7 @@ public class WebAR : BaseState
     {
         base.UpdateLogic();
 
-        if (_bs)
+        if (_bs.ButtonPressed)
         {
             _sm.ChangeState(_sm.homeState);
 

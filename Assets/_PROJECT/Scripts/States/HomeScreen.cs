@@ -27,6 +27,7 @@ public class HomeScreen : BaseState
     {
         base.Enter();
         _bs = ButtonSingleton.Instance;
+        _bs.ButtonPressed = false;
         _sm.AddScene(Enumerations.Scenes.HomeScreen);
     }
 
@@ -34,7 +35,7 @@ public class HomeScreen : BaseState
     {
         base.UpdateLogic();
 
-        if (_bs)
+        if (_bs.ButtonPressed)
         {
             _sm.ChangeState(_sm.webARState);
 

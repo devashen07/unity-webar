@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_PROJECT/Scenes/Persistent.unity
+    guid: f43fd14c093da414d80de9fcd6a9a0f5
+  - enabled: 1
+    path: Assets/_PROJECT/Scenes/Intro.unity
+    guid: e61af2a4aa5bcbc4a9c1f4e02a33e817
+  - enabled: 1
+    path: Assets/_PROJECT/Scenes/WebAR.unity
+    guid: bfba53ce82d47b1479191d418af4e65f
+  m_configObjects:
+    WebXR.Settings: {fileID: 11400000, guid: d33b1ca52aad0cd49aeeba1e05472cb1, type: 2}

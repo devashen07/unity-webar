@@ -19,7 +19,7 @@ namespace WebXR
 
     private static WebXRManager instance;
     [HideInInspector]
-    public WebXRState xrState = WebXRState.NORMAL;
+    public WebXRState xrState = WebXRState.AR;
 
     public delegate void XRCapabilitiesUpdate(WebXRDisplayCapabilities capabilities);
     public event XRCapabilitiesUpdate OnXRCapabilitiesUpdate;
@@ -133,7 +133,7 @@ namespace WebXR
       {
         DontDestroyOnLoad(instance);
       }
-      xrState = WebXRState.NORMAL;
+      xrState = WebXRState.AR;
     }
 
     // Handles WebXR capabilities from browser
