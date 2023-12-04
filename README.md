@@ -40,5 +40,6 @@ I tested and deployed the experience using Github pages with an Android device. 
 - The experience is hosted using Github pages and can be found at ```https://devashen07.github.io/webar-assessment/```.
 - Unity version **2019.4.39** with WebGL library installed (Had to use an older version as WebXR didnt work well on the newer LTS versions).
 
-- Very unhappy with the end result. With the time constraint, I unfortunately cannot develop further to produce a robust solution and explore a different toolkit. 
+- Very unhappy with the end result. With the time constraint, I unfortunately cannot develop further to produce a robust solution and explore a different toolkit.
+- Please feel free to look through my github for a few of my other projects I have worked on. 
 
