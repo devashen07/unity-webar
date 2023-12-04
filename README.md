@@ -4,8 +4,8 @@ This repo provides Unity source files for a WebAR experience.
 
 ## Comments and Challenges
 
-- Going about this task, I first started exploring which platforms and toolkits would be suitable to accomplish this task. I have not worked specifically within the WebAR space besides the odd tutorials I use to do a couple of years ago but realized things have really changed. After some research, I could not find a free toolkit to use that allows multiple image tracking within one session. The best option would of been to use Aframe with libraries such as AR.js. However, given my limited knowledge of these toolkits and the time constraint, I didn't feel it would properly demonstrate my technical ability and of course me having to learn a new toolkit from scratch would have been time consuming.
-- As such, I eventually chose Unity. However, came to realize that the **free open source toolkits** that can be used within Unity are either not well supported or are outdated. I tried wrapping AR.js into Unity as well to no luck. I eventually settled on WebXR which has lost a lot of support within the Unity environment. 
+- Going about this task, I first started exploring which platforms and toolkits would be suitable to accomplish this task. I have not worked specifically worked within the WebAR space besides the odd tutorials I use to do a couple of years ago but realized things have really changed. After some research, I could not find a free toolkit to use that allows multiple image tracking within one session, the best options would have been MindAR or Imagine Plugins but are unforunately paid services. One option would of been to use Aframe with libraries such as AR.js. However, given my limited knowledge of these toolkits and the time constraint, I didn't feel it would properly demonstrate my technical ability and of course me having to learn a new toolkit from scratch would have been time consuming.
+- As such, I eventually chose Unity. However, came to realize that the **free open source toolkits** that can be used within Unity are either not well supported or are outdated. I eventually settled on WebXR which has lost a lot of support within the Unity environment. 
 
 ## Methodology
 
@@ -15,7 +15,7 @@ The core design of the application follows a simple Finite State Machine pattern
 - Home
 - WebAR Scene
 
-Each state can be toggled between. Using this pattern allows separation between interfaces allowing for modular and maintainable codebase. FSMs are a nice way of decoupling behaviours to better organize the project. The states themselves have 3 important points:
+Each state can be toggled between. Using this pattern allows separation between interfaces allowing for a modular and maintainable codebase, all abiding by OOP and SOLID design principles. FSMs are a nice way of decoupling behaviours to better organize the project. The states themselves have 3 important points:
 
 | Method        | Description                                                  |
 |---------------|--------------------------------------------------------------|
@@ -23,7 +23,7 @@ Each state can be toggled between. Using this pattern allows separation between 
 | UpdateLogic() | Logic that runs continuously when state is current           |
 | Exit()        | Any clean-ups or unsubscribe events before leaving the state | 
 
-A second core pattern that was used is the Singleton design pattern, certain navigation events need to run through the lifetime of the application as one instance such as the navigation between states. 
+A second core pattern that was used is the Singleton design pattern, certain navigation events need to run through the lifetime of the application as one instance such as the navigation between states. Essentially a hybrid method between an observer pattern and singleton. 
 
 The custom scripts can be found ```Assets/_PROJECT/Scripts```.
 
@@ -41,5 +41,8 @@ I tested and deployed the experience using Github pages with an Android device. 
 - Unity version **2019.4.39** with WebGL library installed (Had to use an older version as WebXR didnt work well on the newer LTS versions).
 
 - Very unhappy with the end result. With the time constraint, I unfortunately cannot develop further to produce a robust solution and explore a different toolkit.
-- Please feel free to look through my github for a few of my other projects I have worked on. 
+- Please feel free to look through this github for a few of my other projects I have worked on within the AR space in the past.
+- This assessment really caught me off guard as my expertise mainly sits within C#, Unity, OOP architectures. I've only recently been developing my skills in JS. ***If possible, I would really like to give it another shot.***
+
+  Thanks for your time and consideration. 
 
