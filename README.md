@@ -11,7 +11,7 @@ This repo provides Unity source files for a WebAR experience.
 
 ### Application Architecture
 
-The core design of the application follows a simple Finite State Machine pattern that I developed from scratch.  A FSM is a model that can be used to control execution flow. In this scenario, the FSM is made up of 2 states, that is: 
+The core design of the application follows a simple Finite State Machine pattern that I developed from scratch.  A FSM is a design pattern that can be used to control execution flow. In this scenario, the FSM is made up of 2 states, that is: 
 - Home
 - WebAR Scene
 
